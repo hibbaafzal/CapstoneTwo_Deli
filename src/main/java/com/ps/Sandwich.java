@@ -171,8 +171,24 @@ public class Sandwich extends Order {
         return finalPrice;
     }
 
-<<<<<<< HEAD
-=======
-    // modified toString method to make it more visually appealing.
- 
->>>>>>> 3c12a10246ca3f8977f52fd6e5a80c5cdc7367fb
+
+    @Override
+    public String toString() {
+        return "-----------Your Sandwich-----------\n" +
+
+                "Bread Size: " + (getSize() != null ? getSize() : "Required") + "\n" +
+                "Bread Type: " + (getType() != null ? getType() : "Required") + "\n" +
+                "Premium Toppings: " + premiumToppingsList + "\n" +
+                "Extra Meat: " + extraMeat + "\n" +
+                "Regular Toppings: " + regularToppingsList + "\n" +
+                "Cheeses: " + cheesesList + "\n" +
+                "Extra Cheese: " + extraCheese + "\n" +
+                "Sauces List: " + saucesList + "\n" +
+                "Toasted: " + toasted + "\n" +
+                "Sides:" + sidesList + "\n";
+
+    }
+}
+
+
+

@@ -14,7 +14,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;
 
-        while (isRunning) {
+        do {
             System.out.println("\n\n\n" + GREEN + "--------------Welcome to the DELI-cious Sandwich Shop!--------------" + RESET);
             System.out.println("How can we get you started today?");
             System.out.println("[1] New Order");
@@ -40,6 +40,6 @@ public class Main {
                 scanner.nextLine(); // Consume invalid input
                 System.out.println(RED + "Invalid input, please enter a number." + RESET);
             }
-        }
+        } while (isRunning);
     }
 }

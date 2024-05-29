@@ -1,22 +1,15 @@
 package com.ps;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.ps.Drinks.orderDrinks;
-
 public class OrderScreen extends Order {
 
-    // Store the order items
-    public static List<Sandwich> sandwiches = new ArrayList<>();
-    public static List<String> drinks = new ArrayList<>();
-    public static List<String> chips = new ArrayList<>();
+    // Store the items
+    static List<Sandwich> sandwiches = new ArrayList<>();
+    static List<String> drinks = new ArrayList<>();
+    static List<String> chips = new ArrayList<>();
 
     // ANSI code
     public static String RESET = "\u001B[0m";
@@ -46,18 +39,15 @@ public class OrderScreen extends Order {
                     case 1:
                         new SandwichCustomization().homeScreen(scanner); // Add sandwich
                         break;
-
                     case 2:
-                        orderDrinks(scanner); // Add drink
+                        new Drinks().orderDrinks(scanner); // Add drink
                         break;
-
                     case 3:
                         addChips(scanner); // Add chips
                         break;
                     case 4:
                         checkout(scanner); // Checkout
                         break;
-
                     case 0:
                         // Cancel order
                         sandwiches.clear();
@@ -65,7 +55,6 @@ public class OrderScreen extends Order {
                         chips.clear();
                         isOrdering = false;
                         break;
-
                     default:
                         System.out.println(RED + "Invalid choice, please try again." + RESET);
                         break;
@@ -80,6 +69,7 @@ public class OrderScreen extends Order {
     // Method to add chips to the order
     private static void addChips(Scanner scanner) {
         System.out.print("How many bags of chips would you like?: ");
+
         if (scanner.hasNextInt()) {
             int numberOfBags = scanner.nextInt();
             scanner.nextLine(); // Consume newline
@@ -89,8 +79,9 @@ public class OrderScreen extends Order {
                     chips.add("Bag of chips");
                 }
                 System.out.println(GREEN + numberOfBags + " bag(s) of chips added to your order." + RESET);
+
             } else {
-                System.out.println(RED + "Invalid choice. Please enter a positive number." + RESET);
+                System.out.println(RED + "Invalid choice. Please enter a valid number." + RESET);
             }
         } else {
             scanner.nextLine(); // Consume invalid input
@@ -100,7 +91,7 @@ public class OrderScreen extends Order {
 
     // Method to handle the checkout process
     private static void checkout(Scanner scanner) {
-        System.out.println(YELLOW + "------------Your Order:------------" + RESET);
+        System.out.println(YELLOW + "------------Your Order------------" + RESET);
         if (sandwiches.isEmpty() && drinks.isEmpty() && chips.isEmpty()) {
             System.out.println("Your order is empty.");
             System.out.println(RED + "Please add something to your order." + RESET);
@@ -108,8 +99,8 @@ public class OrderScreen extends Order {
         } else {
             if (!sandwiches.isEmpty()) {
                 System.out.println("Sandwiches:");
-                for (Sandwich sandwiches : OrderScreen.sandwiches) {
-                    System.out.println(sandwiches);
+                for (Sandwich sandwich : OrderScreen.sandwiches) {
+                    System.out.println(sandwich);
                 }
             }
             if (!drinks.isEmpty()) {
@@ -133,103 +124,20 @@ public class OrderScreen extends Order {
         String choice = scanner.nextLine();
         switch (choice.toLowerCase()) {
             case "c":
-                printReceiptToFile(sandwiches, drinks, chips);
+                OrderFileManager.printReceiptToFile(sandwiches, drinks, chips);
                 sandwiches.clear();
                 drinks.clear();
                 chips.clear();
                 System.exit(0);
                 break;
-
             case "x":
                 sandwiches.clear();
                 drinks.clear();
                 chips.clear();
                 break;
-
             default:
                 System.out.println(RED + "Invalid choice, please try again." + RESET);
                 break;
         }
-    }
-
-    // Method to print the receipt to a file
-    // using datetime formatter
-    public static void printReceiptToFile(List<Sandwich> sandwiches,
-                                          List<String> drinks,
-                                          List<String> chips) {
-
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
-        String formattedDateTime = now.format(formatter);
-
-        // Create a file name based on the current date and time EACH TIME receipt is printed.
-
-        String fileName = "receipts/" + formattedDateTime + ".txt";
-
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
-            double total = 0;
-
-            bufferedWriter.write("--------- RECEIPT ---------\n");
-            bufferedWriter.write("Date: " + now.toLocalDate() + "\n\n");
-
-            // Write sandwich details and calculate total price
-            if (!sandwiches.isEmpty()) {
-                bufferedWriter.write("Sandwiches:\n");
-                for (Sandwich sandwich : sandwiches) {
-                    bufferedWriter.write(sandwich.toString() + "\n");
-                    total += sandwich.getPrice();
-                }
-            }
-
-            // Write drink details and calculate total price
-            if (!drinks.isEmpty()) {
-                bufferedWriter.write("Drinks:\n");
-
-                for (String drink : drinks) {
-                    bufferedWriter.write(drink + "\n");
-
-                    double drinkPrice = getDrinkPrice(drink);
-                    bufferedWriter.write(String.format("$%.2f\n", drinkPrice));
-                    total += drinkPrice;
-                }
-            }
-
-
-
-            // Write chip details and calculate total price
-            if (!chips.isEmpty()) {
-                bufferedWriter.write("Chips:\n");
-
-                for (String chip : chips) {
-                    bufferedWriter.write(chip + "\n");
-                    double chipPrice = 1.50;
-                    bufferedWriter.write(String.format("$%.2f\n", chipPrice));
-                    total += chipPrice;
-                }
-            }
-
-            // Calculate and write tax and total amount
-            double tax = total * 0.08875;
-            bufferedWriter.write(String.format("\nTax: $%.2f\n", tax));
-            bufferedWriter.write(String.format("Total: $%.2f\n", total + tax));
-            bufferedWriter.write("----------------------------\n");
-
-            System.out.println(GREEN + "Your receipt has been printed." + RESET);
-            System.out.println(YELLOW + "Thank you for choosing DELI-cious Deli!\nWe appreciate your business!" + RESET);
-        } catch (IOException e) {
-            System.out.println("Error writing receipt: " + e.getMessage());
-        }
-    }
-
-    // Get the price of a drink based on its size
-    private static double getDrinkPrice(String drink) {
-        if (drink.startsWith("Small")) {
-            return 2.00;
-        } else if (drink.startsWith("Medium")) {
-            return 2.50;
-        } else if (drink.startsWith("Large")) {
-            return 3.00;
-        }
-        return 0;
     }
 }

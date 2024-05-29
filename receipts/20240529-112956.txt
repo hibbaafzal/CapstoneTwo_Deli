@@ -1,0 +1,26 @@
+--------- RECEIPT ---------
+Date: 2024-05-29
+
+Sandwiches:
+-----------Your Sandwich-----------
+Bread Size: 4"
+Bread Type: Wheat
+Premium Toppings: [Steak]
+Extra Meat: true
+Regular Toppings: [Lettuce]
+Cheeses: [Swiss]
+Extra Cheese: true
+Sauces List: []
+Toasted: true
+Sides:[]
+
+Drinks:
+Large Coke
+$3.00
+Chips:
+Bag of chips
+$1.50
+
+Tax: $1.11
+Total: $13.66
+----------------------------
