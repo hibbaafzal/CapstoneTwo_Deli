@@ -193,7 +193,11 @@ public class SandwichCustomization {
     }
 
     // Method to choose toppings
-    private void chooseToppings(Scanner scanner, Sandwich userSandwich, List<String> toppings, String type) {
+    private void chooseToppings(Scanner scanner,
+                                Sandwich userSandwich,
+                                List<String> toppings,
+                                String type) {
+
         List<String> chosenToppings = new ArrayList<>();
         boolean isChoosingToppings = true;
         do {
@@ -218,7 +222,10 @@ public class SandwichCustomization {
                 switch (userDone.toLowerCase()) {
                     case "d":
                         System.out.printf("Summary of %s toppings:\n\n", type);
+
+                        // loops through and prints each topping chosen
                         chosenToppings.forEach(System.out::println);
+
                         System.out.print("Is this correct? (Y/N): ");
                         String accepted = scanner.nextLine();
                         switch (accepted.toLowerCase()) {
@@ -251,6 +258,7 @@ public class SandwichCustomization {
 
     // Method to choose cheeses
     private void chooseCheeses(Scanner scanner, Sandwich userSandwich) {
+
         List<String> chosenCheeses = new ArrayList<>();
         boolean isChoosingCheeses = true;
         do {
@@ -326,6 +334,7 @@ public class SandwichCustomization {
                 String userDone = scanner.nextLine();
                 if (userDone.equalsIgnoreCase("d")) {
                     System.out.println("\nSummary of sauces:");
+
                     chosenSauces.forEach(System.out::println);
                     System.out.print("Is this correct? (Y/N): ");
                     String accepted = scanner.nextLine();
@@ -369,6 +378,7 @@ public class SandwichCustomization {
                 String userDone = scanner.nextLine();
                 if (userDone.equalsIgnoreCase("d")) {
                     System.out.println("\nSummary of sides:");
+
                     chosenSides.forEach(System.out::println);
                     System.out.print("Is this correct? (Y/N): ");
                     String accepted = scanner.nextLine();

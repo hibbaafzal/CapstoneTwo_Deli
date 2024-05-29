@@ -1,0 +1,34 @@
+--------- RECEIPT ---------
+Date: 2024-05-29
+
+Sandwiches:
+-----------Your Sandwich-----------
+Bread Size: 4"
+Bread Type: White
+Premium Toppings: [Steak]
+Extra Meat: true
+Regular Toppings: [Tomatoes]
+Cheeses: []
+Extra Cheese: false
+Sauces List: []
+Toasted: true
+Sides:[]
+
+-----------Your Sandwich-----------
+Bread Size: 8"
+Bread Type: White
+Premium Toppings: [Bacon]
+Extra Meat: false
+Regular Toppings: [Lettuce, Tomato]
+Cheeses: [Cheddar]
+Extra Cheese: false
+Sauces List: [Ranch]
+Toasted: true
+Sides:[]
+
+Drinks:
+Small Coke
+$2.00
+
+Tax: $1.73
+Total: $21.23

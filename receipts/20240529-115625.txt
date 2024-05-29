@@ -1,0 +1,19 @@
+--------- RECEIPT ---------
+Date: 2024-05-29
+
+Sandwiches:
+-----------Your Sandwich-----------
+Bread Size: 4"
+Bread Type: White
+Premium Toppings: [Bacon]
+Extra Meat: false
+Regular Toppings: []
+Cheeses: [American]
+Extra Cheese: false
+Sauces List: []
+Toasted: false
+Sides:[]
+
+
+Tax: $0.64
+Total: $7.89

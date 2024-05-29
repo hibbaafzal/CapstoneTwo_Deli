@@ -6,6 +6,11 @@ import java.util.Scanner;
 
 public class Drinks {
 
+    public static String RESET = "\u001B[0m";
+    public static String RED = "\u001B[31m";
+    public static String GREEN = "\u001B[32m";
+    public static String YELLOW = "\u001B[33m";
+
     List<String> availableDrinks = new ArrayList<>();
 
 
@@ -27,7 +32,7 @@ public class Drinks {
             System.out.printf("[%d] %s\n", i + 1, availableDrinks.get(i));
 
         }
-        System.out.print("Enter the number of the drink you want to add to your order: ");
+        System.out.print("\nEnter the number of the drink you want to add to your order: ");
         if (scanner.hasNextInt()) {
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
@@ -53,23 +58,23 @@ public class Drinks {
                             size = "Large";
                             break;
                         default:
-                            System.out.println("Invalid size choice. Defaulting to Small.");
+                            System.out.println(RED + "Invalid size choice. Defaulting to Small." + RESET);
                             size = "Small";
                             break;
                     }
                     OrderScreen.drinks.add(size + " " + drink);
-                    System.out.println(size + " " + drink + " added to your order.");
+                    System.out.println(GREEN + size + " " + drink + " added to your order."+ RESET);
                 } else {
                     scanner.nextLine(); // Consume invalid input
-                    System.out.println("Invalid input, please enter a number for the size.");
+                    System.out.println(RED + "Invalid input, please enter a number for the size."+ RESET);
                 }
             } else {
-                System.out.println("Invalid choice.");
+                System.out.println(RED+ "Invalid choice."+ RESET);
             }
 
         } else {
             scanner.nextLine(); // Consume invalid input
-            System.out.println("Invalid input, please enter a number.");
+            System.out.println(RED + "Invalid input, please enter a number."+ RESET);
         }
     }
 }

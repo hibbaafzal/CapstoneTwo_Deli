@@ -62,7 +62,6 @@ public class OrderFileManager {
             double tax = total * 0.08875;
             bufferedWriter.write(String.format("\nTax: $%.2f\n", tax));
             bufferedWriter.write(String.format("Total: $%.2f\n", total + tax));
-            bufferedWriter.write("----------------------------\n");
 
             System.out.println(OrderScreen.GREEN + "Your receipt has been printed." + OrderScreen.RESET);
             System.out.println(OrderScreen.YELLOW + "Thank you for choosing DELI-cious Deli!\n" +

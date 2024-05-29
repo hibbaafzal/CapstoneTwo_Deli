@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sandwich extends Order {
+
+    // instances of the lists
+    // store different customizations for each sandwich
+
     private List<String> premiumToppingsList = new ArrayList<>();
     private boolean extraMeat = false;
     private List<String> regularToppingsList = new ArrayList<>();
@@ -13,6 +17,7 @@ public class Sandwich extends Order {
     private boolean toasted = false;
     private List<String> sidesList = new ArrayList<>();
 
+    //static lists holding available options
     public static List<String> premiumToppings = new ArrayList<>();
     public static List<String> regularToppings = new ArrayList<>();
     public static List<String> cheeses = new ArrayList<>();
@@ -52,6 +57,9 @@ public class Sandwich extends Order {
         sides.add("au jus");
         sides.add("sauce");
     }
+
+
+    // getters and setters
 
     public List<String> getPremiumToppings() {
         return premiumToppingsList;
@@ -117,6 +125,8 @@ public class Sandwich extends Order {
         this.toasted = toasted;
     }
 
+
+
     public double getPrice() {
         double finalPrice = 0;
         double premiumToppingCharge = 0;
@@ -124,8 +134,8 @@ public class Sandwich extends Order {
         double cheeseCharge = 0;
         double extraCheeseCharge = 0;
 
-        if (getSize() != null) {
-            switch (getSize()) {
+        if (this.getSize() != null) {
+            switch (this.getSize()) {
                 case "4\"":
                     finalPrice += 5.50;
                     premiumToppingCharge = 1.00;
@@ -151,7 +161,7 @@ public class Sandwich extends Order {
         }
 
         if (premiumToppingsList != null) {
-            for (String ignored : premiumToppingsList) {
+            for (String premiumTopping : premiumToppingsList) {
                 finalPrice += premiumToppingCharge;
             }
         }
@@ -186,6 +196,8 @@ public class Sandwich extends Order {
                 "Sauces List: " + saucesList + "\n" +
                 "Toasted: " + toasted + "\n" +
                 "Sides:" + sidesList + "\n";
+
+
 
     }
 }

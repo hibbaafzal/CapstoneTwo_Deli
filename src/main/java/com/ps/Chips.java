@@ -1,12 +1,9 @@
 package com.ps;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class Chips {
-
-
 
     // Adding chips to order
     public static void addChips(Scanner scanner) {
