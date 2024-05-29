@@ -26,6 +26,7 @@ public class Drinks {
     public static void orderDrinks(Scanner scanner) {
 
         // Display available drinks
+
         System.out.println("Available drinks:");
         for (int i = 0; i < availableDrinks.size(); i++) {
             System.out.printf("[%d] %s\n", i + 1, availableDrinks.get(i));

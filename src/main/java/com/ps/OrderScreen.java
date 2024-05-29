@@ -13,22 +13,22 @@ import static com.ps.Drinks.orderDrinks;
 
 public class OrderScreen extends Order {
 
-    // store the order items
+    // Store the order items
     public static List<Sandwich> sandwiches = new ArrayList<>();
     public static List<String> drinks = new ArrayList<>();
     public static List<String> chips = new ArrayList<>();
 
-    // ansi code
+    // ANSI code
     public static String RESET = "\u001B[0m";
     public static String RED = "\u001B[31m";
     public static String GREEN = "\u001B[32m";
     public static String YELLOW = "\u001B[33m";
 
-    // start the ordering process
+    // Start the ordering process
     public static void startOrder(Scanner scanner) {
         boolean isOrdering = true;
 
-        while (isOrdering) {
+        do {
             // Display the order screen
             System.out.println(YELLOW + "\n\n\n-----------------Order Screen-----------------\n\n" + RESET);
             System.out.println("What would you like to do?");
@@ -38,14 +38,13 @@ public class OrderScreen extends Order {
             System.out.println(GREEN + "[4] Checkout" + RESET);
             System.out.println(RED + "[0] Cancel Order" + RESET);
 
-
             if (scanner.hasNextInt()) {
                 int orderScreen = scanner.nextInt();
                 scanner.nextLine(); // Consume newline
 
                 switch (orderScreen) {
                     case 1:
-                        new Sandwich().homeScreen(scanner); // Add sandwich
+                        new SandwichCustomization().homeScreen(scanner); // Add sandwich
                         break;
 
                     case 2:
@@ -75,7 +74,7 @@ public class OrderScreen extends Order {
                 scanner.nextLine();
                 System.out.println(RED + "Invalid input, please enter a number." + RESET);
             }
-        }
+        } while (isOrdering);
     }
 
     // Method to add chips to the order
@@ -170,7 +169,6 @@ public class OrderScreen extends Order {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
             double total = 0;
 
-
             bufferedWriter.write("--------- RECEIPT ---------\n");
             bufferedWriter.write("Date: " + now.toLocalDate() + "\n\n");
 
@@ -196,6 +194,8 @@ public class OrderScreen extends Order {
                 }
             }
 
+
+
             // Write chip details and calculate total price
             if (!chips.isEmpty()) {
                 bufferedWriter.write("Chips:\n");
@@ -214,15 +214,14 @@ public class OrderScreen extends Order {
             bufferedWriter.write(String.format("Total: $%.2f\n", total + tax));
             bufferedWriter.write("----------------------------\n");
 
-
             System.out.println(GREEN + "Your receipt has been printed." + RESET);
             System.out.println(YELLOW + "Thank you for choosing DELI-cious Deli!\nWe appreciate your business!" + RESET);
         } catch (IOException e) {
-            System.err.println("Error writing receipt: " + e.getMessage());
+            System.out.println("Error writing receipt: " + e.getMessage());
         }
     }
 
-    // get the price of a drink based on its size
+    // Get the price of a drink based on its size
     private static double getDrinkPrice(String drink) {
         if (drink.startsWith("Small")) {
             return 2.00;

@@ -3,7 +3,7 @@ package com.ps;
 import java.util.Scanner;
 
 public class Main {
-    // ANSI color codes
+    // ansi color codes
     public static String RESET = "\u001B[0m";
     public static String RED = "\u001B[31m";
     public static String GREEN = "\u001B[32m";
