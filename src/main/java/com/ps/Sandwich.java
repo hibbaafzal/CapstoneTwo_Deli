@@ -171,3 +171,8 @@ public class Sandwich extends Order {
         return finalPrice;
     }
 
+<<<<<<< HEAD
+=======
+    // modified toString method to make it more visually appealing.
+ 
+>>>>>>> 3c12a10246ca3f8977f52fd6e5a80c5cdc7367fb
