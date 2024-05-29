@@ -1,4 +1,4 @@
-# Deli-cious Deli
+# DELI-cious Deli
 
 This application allows users to order a sandwich of their choice. They are able to customize their sandwiches to their liking
 
