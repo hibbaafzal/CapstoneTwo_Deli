@@ -18,11 +18,12 @@ public class Sandwich extends Order {
     private List<String> sidesList = new ArrayList<>();
 
     //static lists holding available options
-    public static List<String> premiumToppings = new ArrayList<>();
-    public static List<String> regularToppings = new ArrayList<>();
-    public static List<String> cheeses = new ArrayList<>();
-    public static List<String> sauces = new ArrayList<>();
-    public static List<String> sides = new ArrayList<>();
+
+    static List<String> premiumToppings = new ArrayList<>();
+    static List<String> regularToppings = new ArrayList<>();
+    static List<String> cheeses = new ArrayList<>();
+    static List<String> sauces = new ArrayList<>();
+    static List<String> sides = new ArrayList<>();
 
     static {
         premiumToppings.add("Steak");
@@ -127,6 +128,7 @@ public class Sandwich extends Order {
 
 
 
+    // calculating price
     public double getPrice() {
         double finalPrice = 0;
         double premiumToppingCharge = 0;

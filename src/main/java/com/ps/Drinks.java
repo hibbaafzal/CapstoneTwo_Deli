@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Drinks {
+public class Drinks extends Order{
 
     public static String RESET = "\u001B[0m";
     public static String RED = "\u001B[31m";
     public static String GREEN = "\u001B[32m";
-    public static String YELLOW = "\u001B[33m";
 
     List<String> availableDrinks = new ArrayList<>();
 
@@ -62,7 +61,7 @@ public class Drinks {
                             size = "Small";
                             break;
                     }
-                    OrderScreen.drinks.add(size + " " + drink);
+                    UserInterface.drinks.add(size + " " + drink);
                     System.out.println(GREEN + size + " " + drink + " added to your order."+ RESET);
                 } else {
                     scanner.nextLine(); // Consume invalid input

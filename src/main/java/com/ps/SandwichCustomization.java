@@ -23,7 +23,7 @@ public class SandwichCustomization {
 
             do {
                 // Display the current sandwich state
-                System.out.printf("\n%s\n", userSandwich);
+               System.out.printf("\n%s\n", userSandwich);
 
                 // Display options for customizing the sandwich
                 System.out.println("[1] Choose bread size");
@@ -65,7 +65,7 @@ public class SandwichCustomization {
                             chooseSides(scanner, userSandwich);
                             break;
                         case 8:
-                            userSandwich = CustomSandwiches.chooseSignatureSandwich(scanner);
+                            userSandwich = SignatureSandwiches.chooseSignatureSandwich(scanner);
                             break;
                         case 9:
                             // Finalize the sandwich if required items are chosen
@@ -95,7 +95,7 @@ public class SandwichCustomization {
                                         userSandwich.setExtraMeat(true);
                                     }
                                 }
-                                OrderScreen.sandwiches.add(userSandwich);
+                                UserInterface.sandwiches.add(userSandwich);
                                 isCreatingSandwich = false;
                             } else {
                                 System.out.println(RED + "Sorry, it seems that you haven't chosen the required items (sandwich size / sandwich type)\nPlease select one of each to finalize your sandwich." + RESET);

@@ -3,7 +3,7 @@ package com.ps;
 
 import java.util.Scanner;
 
-public class Chips {
+public class Chips extends Order{
 
     // Adding chips to order
     public static void addChips(Scanner scanner) {
@@ -18,7 +18,7 @@ public class Chips {
             if (numberOfBags > 0) {
                 // add the specified number of bags to the order
                 for (int i = 0; i < numberOfBags; i++) {
-                    OrderScreen.chips.add("Bag of chips");
+                    UserInterface.chips.add("Bag of chips");
                 }
 
                 System.out.println(numberOfBags + " bag(s) of chips added to your order.");

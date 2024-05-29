@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class OrderScreen extends Order {
+public class UserInterface extends Order {
 
     // Store the items
     static List<Sandwich> sandwiches = new ArrayList<>();
@@ -16,6 +16,40 @@ public class OrderScreen extends Order {
     public static String RED = "\u001B[31m";
     public static String GREEN = "\u001B[32m";
     public static String YELLOW = "\u001B[33m";
+
+    // Method to start the main user interface loop
+    public void startOrder() {
+        Scanner scanner = new Scanner(System.in);
+        boolean isRunning = true;
+
+        do {
+            System.out.println("\n\n\n" + GREEN + "--------------Welcome to the DELI-cious Sandwich Shop!--------------" + RESET);
+            System.out.println("How can we get you started today?");
+            System.out.println("[1] New Order");
+            System.out.println("[0] Exit");
+
+            if (scanner.hasNextInt()) {
+                int newOrderCommand = scanner.nextInt();
+                scanner.nextLine(); // Consume newline
+
+                switch (newOrderCommand) {
+                    case 1:
+                        startOrder(scanner);
+                        break;
+                    case 0:
+                        isRunning = false;
+                        System.out.println(YELLOW + "Thank you for visiting DELI-cious Sandwich Shop! Have a great day!" + RESET);
+                        break;
+                    default:
+                        System.out.println(RED + "Invalid choice, please try again." + RESET);
+                        break;
+                }
+            } else {
+                scanner.nextLine(); // Consume invalid input
+                System.out.println(RED + "Invalid input, please enter a number." + RESET);
+            }
+        } while (isRunning);
+    }
 
     // Start the ordering process
     public static void startOrder(Scanner scanner) {
@@ -99,7 +133,7 @@ public class OrderScreen extends Order {
         } else {
             if (!sandwiches.isEmpty()) {
                 System.out.println("Sandwiches:");
-                for (Sandwich sandwich : OrderScreen.sandwiches) {
+                for (Sandwich sandwich : sandwiches) {
                     System.out.println(sandwich);
                 }
             }

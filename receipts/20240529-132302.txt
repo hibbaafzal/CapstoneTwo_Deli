@@ -1,0 +1,25 @@
+--------- RECEIPT ---------
+Date: 2024-05-29
+
+Sandwiches:
+-----------Your Sandwich-----------
+Bread Size: 12"
+Bread Type: White
+Premium Toppings: [Steak]
+Extra Meat: true
+Regular Toppings: [Peppers]
+Cheeses: [Cheddar]
+Extra Cheese: true
+Sauces List: [Mayo]
+Toasted: true
+Sides:[sauce]
+
+Drinks:
+Medium Coke
+$2.50
+Chips:
+Bag of chips
+$1.50
+
+Tax: $1.79
+Total: $21.94

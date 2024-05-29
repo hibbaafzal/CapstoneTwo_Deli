@@ -7,7 +7,13 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+
+
 public class OrderFileManager {
+
+    public static String RESET = "\u001B[0m";
+    public static String GREEN = "\u001B[32m";
+    public static String YELLOW = "\u001B[33m";
 
     // Method to print the receipt to a file
 
@@ -63,9 +69,9 @@ public class OrderFileManager {
             bufferedWriter.write(String.format("\nTax: $%.2f\n", tax));
             bufferedWriter.write(String.format("Total: $%.2f\n", total + tax));
 
-            System.out.println(OrderScreen.GREEN + "Your receipt has been printed." + OrderScreen.RESET);
-            System.out.println(OrderScreen.YELLOW + "Thank you for choosing DELI-cious Deli!\n" +
-                    "We appreciate your business!" + OrderScreen.RESET);
+            System.out.println(GREEN + "Your receipt has been printed." + RESET);
+            System.out.println(YELLOW + "Thank you for choosing DELI-cious Deli!\n" +
+                    "We appreciate your business!" + RESET);
         } catch (IOException e) {
             System.out.println("Error writing receipt: " + e.getMessage());
         }
