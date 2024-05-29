@@ -124,11 +124,11 @@ When users are done with their order, they can checkout and their receipt will b
 
 <details> 
   
-  **<summary> Custom Sandwiches </summary>**
+  **<summary> Signature Sandwiches </summary>**
 
 
-### Custom Sandwiches
-If a user wants a custom sandwich, they will also be able to get those.
+### Signature Sandwiches
+If a user wants a signature sandwich, they will also be able to get those.
 
 
 
