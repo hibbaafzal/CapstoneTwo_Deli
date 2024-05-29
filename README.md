@@ -90,9 +90,11 @@ When the user is done customizing their sandwhich, they can choose whether or no
 
 
 <details> 
- **<summary> Adding Chips </summary>**
+  
+  **<summary> Adding Chips </summary>**
 
   ### Adding Chips
+
 
   Users can also add chips to their order.
 
@@ -102,8 +104,10 @@ When the user is done customizing their sandwhich, they can choose whether or no
 
 
 
-  <details> 
- **<summary> Checkout </summary>**
+<details> 
+  
+  **<summary> Checkout </summary>**
+
 
 ### Checkout
 
