@@ -119,3 +119,45 @@ When users are done with their order, they can checkout and their receipt will b
 
 <img width="466" alt="Screenshot 2024-05-29 at 1 23 35 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/01f17ed1-8d0f-4b1a-b4c3-8ea0d96d85b8">
 
+</details>
+
+
+<details> 
+  
+  **<summary> Custom Sandwiches </summary>**
+
+
+### Custom Sandwiches
+If a user wants a custom sandwich, they will also be able to get those.
+
+
+
+
+</details>
+
+<details> 
+  
+  **<summary> Error Handling </summary>**
+
+
+### Error Handling
+
+If a user enters an incorrect input, they will be asked to try again. 
+
+<img width="631" alt="Screenshot 2024-05-29 at 1 30 45 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/a0a35225-8eba-4fd6-b152-aeec487ca3d5">
+
+
+<img width="547" alt="Screenshot 2024-05-29 at 1 31 00 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/015c7b51-53c5-4524-9797-a4a970ee0bad">
+
+<img width="626" alt="Screenshot 2024-05-29 at 1 31 21 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/036fa382-426e-4089-98f3-de6983b73f77">
+
+
+<img width="643" alt="Screenshot 2024-05-29 at 1 31 45 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/082ecf9e-56c7-4c34-ac04-96e3751d294a">
+
+
+<img width="485" alt="Screenshot 2024-05-29 at 1 32 08 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/41541eba-d1b7-48b5-bb96-7a954f5f280c">
+
+</details>
+
+
+
