@@ -135,6 +135,21 @@ If a user wants a signature sandwich, they will also be able to get those.
 
 </details>
 
+
+<details> 
+  
+  **<summary> Adding Desserts </summary>**
+
+
+### Adding Desserts
+
+If the user wishes to add a dessert to their order they are also able to do that. 
+
+<img width="586" alt="Screenshot 2024-05-29 at 9 57 29 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/abdc9bc6-1ba0-4e5e-8fb8-582718441094">
+
+
+</details>
+
 <details> 
   
   **<summary> Error Handling </summary>**
@@ -161,3 +176,7 @@ If a user enters an incorrect input, they will be asked to try again.
 
 
 ### Interesting Piece of Code
+
+<img width="544" alt="Screenshot 2024-05-29 at 9 59 29 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/3448be86-9e7e-4418-9672-85a0633c9f5b">
+
+This piece of Code displays the current state of the sandwich everytime the user modifies their sandwich. 
