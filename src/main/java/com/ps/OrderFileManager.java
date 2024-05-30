@@ -37,7 +37,7 @@ public class OrderFileManager {
                 bufferedWriter.write("Sandwiches:\n");
                 for (Sandwich sandwich : sandwiches) {
                     bufferedWriter.write(sandwich.toString() + "\n");
-                    total += sandwich.getPrice();
+                    total += sandwich.calcPrice();
                 }
             }
 

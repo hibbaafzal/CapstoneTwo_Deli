@@ -18,7 +18,7 @@ public class UserInterface {
     public static String GREEN = "\u001B[32m";
     public static String YELLOW = "\u001B[33m";
 
-    // Method to start the main user interface loop
+    // Method to start the main user interface.
     public void startOrder() {
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;

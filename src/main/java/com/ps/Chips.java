@@ -8,6 +8,7 @@ public class Chips extends Order {
     public Chips(double price) {
         super(price);
 
+
     }
 
     public static String RESET = "\u001B[0m";
@@ -44,5 +45,12 @@ public class Chips extends Order {
 
     }
 
+    @Override
+    protected double calcPrice() {
 
-}
+        double price;
+        return price = 1.50;
+    }
+
+
+    }

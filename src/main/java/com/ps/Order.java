@@ -1,7 +1,7 @@
 package com.ps;
 
 public abstract class Order {
-    private String size;
+    public String size;
     private String type;
     private double price;
 
@@ -9,6 +9,9 @@ public abstract class Order {
         this.size = size;
         this.type = type;
         this.price = price;
+    }
+
+    public Order(double price) {
     }
 
 
@@ -29,20 +32,11 @@ public abstract class Order {
         this.type = type;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-
 
 
     public Order() {
     }
 
 
-    public Order(double price) {
-    }
-
-
-
+    protected abstract double calcPrice();
 }

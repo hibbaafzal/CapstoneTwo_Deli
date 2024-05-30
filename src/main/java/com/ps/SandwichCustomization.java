@@ -110,7 +110,8 @@ public class SandwichCustomization {
                                 UserInterface.sandwiches.add(userSandwich);
                                 isCreatingSandwich = false;
                             } else {
-                                System.out.println(RED + "Sorry, it seems that you haven't chosen the required items (sandwich size / sandwich type)\nPlease select one of each to finalize your sandwich." + RESET);
+                                System.out.println(RED + "Sorry, it seems that you haven't chosen the required items (sandwich size / sandwich type)\n" +
+                                        "Please select one of each to finalize your sandwich." + RESET);
                             }
                             break;
 

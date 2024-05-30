@@ -148,7 +148,7 @@ public class Sandwich extends Order {
 
     // Calculating price
     @Override
-    public double getPrice() {
+    public double calcPrice() {
         double finalPrice = 0;
         double premiumToppingCharge = 0;
         double extraMeatCharge = 0;

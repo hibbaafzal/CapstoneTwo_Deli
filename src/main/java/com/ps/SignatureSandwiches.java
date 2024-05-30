@@ -33,7 +33,7 @@ public class SignatureSandwiches extends Sandwich {
                 createPhillyCheeseSteakSandwich();
                 break;
             default:
-                throw new IllegalArgumentException("Unknown sandwich type: " + sandwichType);
+                System.out.println("Invalid sandwich type.");
         }
     }
 

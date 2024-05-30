@@ -1,0 +1,15 @@
+--------- RECEIPT ---------
+Date: 2024-05-30
+
+Drinks:
+Small Coke
+$2.00
+Chips:
+Bag of chips
+$1.50
+Desserts:
+Chocolate Cake
+$3.50
+
+Tax: $0.62
+Total: $7.62

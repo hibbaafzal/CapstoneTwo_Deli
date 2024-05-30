@@ -17,9 +17,7 @@ public class Drinks extends Order {
         availableDrinks.add("Pepsi");
         availableDrinks.add("Sprite");
         availableDrinks.add("Water");
-
     }
-
 
     public void orderDrinks(Scanner scanner) {
         System.out.println("Available drinks:");
@@ -45,6 +43,7 @@ public class Drinks extends Order {
                     int sizeChoice = scanner.nextInt();
                     scanner.nextLine(); // Consume newline
                     String size;
+
                     switch (sizeChoice) {
                         case 1:
                             size = "Small";
@@ -60,9 +59,15 @@ public class Drinks extends Order {
                             size = "Small";
                             break;
                     }
+
                     // Adding drink to the order
                     UserInterface.drinks.add(size + " " + drink);
                     System.out.println(GREEN + size + " " + drink + " added to your order." + RESET);
+
+                    // Calculating the price of the selected drink
+                    double price = calcPrice();
+
+
                 } else {
                     scanner.nextLine(); // Consume invalid input
                     System.out.println(RED + "Invalid input, please enter a number for the size." + RESET);
@@ -75,4 +80,27 @@ public class Drinks extends Order {
             System.out.println(RED + "Invalid input, please enter a number." + RESET);
         }
     }
+
+    public double getPrice(String drink) {
+        switch (drink) {
+            case "Small":
+                return 2.00;
+            case "Medium":
+                return 2.50;
+            case "Large":
+                return 3.00;
+            default:
+                return 0.0;
+        }
+    }
+
+    @Override
+    protected double calcPrice() {
+        double total = 0.0;
+        for (String drink : UserInterface.drinks) {
+            total += getPrice(drink);
+        }
+        return total;
+    }
+
 }
