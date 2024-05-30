@@ -3,17 +3,17 @@ Date: 2024-05-29
 
 Sandwiches:
 -----------Your Sandwich-----------
-Bread Size: 4"
-Bread Type: White
-Premium Toppings: [Steak]
+Bread Size: 12"
+Bread Type: Wheat
+Premium Toppings: []
 Extra Meat: false
 Regular Toppings: []
-Cheeses: [American, American]
+Cheeses: []
 Extra Cheese: false
 Sauces List: []
-Toasted: false
-Sides:[]
+Toasted: true
+Sides: []
 
 
-Tax: $0.64
-Total: $7.89
+Tax: $0.75
+Total: $9.25

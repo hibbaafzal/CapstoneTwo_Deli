@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99d51ed5-7bdd-4d00-9ab1-47c034bfecae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ps/SignatureSandwiches.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/CustomSandwiches.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/Drinks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/OrderScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/receipts/20240529-093538.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/receipts/20240529-102803.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/receipts/20240529-112956.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/receipts/20240529-115425.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/receipts/20240529-115534.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Chips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/Chips.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Drinks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/OrderFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/OrderFileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/Sandwich.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/SandwichCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/SandwichCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/SignatureSandwiches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/SignatureSandwiches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +60,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;

@@ -17,13 +17,23 @@ public class SandwichCustomization {
         boolean isRunning = true;
 
         do {
-            // Create a new sandwich object
-            Sandwich userSandwich = new Sandwich();
+            // Create a new sandwich object with default values
+            Sandwich userSandwich = new Sandwich(
+                    "Required",
+                    "Required",
+                    0.0, new ArrayList<>(),
+                    false,
+                    new ArrayList<>(),
+                    new ArrayList<>(),
+                    false,
+                    new ArrayList<>(),
+                    false,
+                    new ArrayList<>());
             boolean isCreatingSandwich = true;
 
             do {
                 // Display the current sandwich state
-               System.out.printf("\n%s\n", userSandwich);
+                System.out.printf("\n%s\n", userSandwich);
 
                 // Display options for customizing the sandwich
                 System.out.println("[1] Choose bread size");
@@ -72,6 +82,7 @@ public class SandwichCustomization {
                             if (checkIfRequiredItemsAreChosen(userSandwich)) {
                                 System.out.print(YELLOW + "Would you like your sandwich toasted? (Y/N): " + RESET);
                                 String toasted = scanner.nextLine();
+
                                 if (toasted.equalsIgnoreCase("y")) {
                                     userSandwich.setToasted(true);
                                 }
@@ -223,8 +234,11 @@ public class SandwichCustomization {
                     case "d":
                         System.out.printf("Summary of %s toppings:\n\n", type);
 
-                        // loops through and prints each topping chosen
-                        chosenToppings.forEach(System.out::println);
+                        // loops through and prints each topping chosen by the user
+
+                        for (String topping : chosenToppings) {
+                            System.out.println(topping);
+                        }
 
                         System.out.print("Is this correct? (Y/N): ");
                         String accepted = scanner.nextLine();
@@ -284,7 +298,10 @@ public class SandwichCustomization {
                 switch (userDone.toLowerCase()) {
                     case "d":
                         System.out.println("\nSummary of cheeses:");
-                        chosenCheeses.forEach(System.out::println);
+
+                        for (String cheese : chosenCheeses) {
+                            System.out.println(cheese);
+                        }
                         System.out.print("Is this correct? (Y/N): ");
                         String accepted = scanner.nextLine();
                         switch (accepted.toLowerCase()) {
@@ -335,7 +352,10 @@ public class SandwichCustomization {
                 if (userDone.equalsIgnoreCase("d")) {
                     System.out.println("\nSummary of sauces:");
 
-                    chosenSauces.forEach(System.out::println);
+                    for (String sauce : chosenSauces) {
+                        System.out.println(sauce);
+                    }
+
                     System.out.print("Is this correct? (Y/N): ");
                     String accepted = scanner.nextLine();
                     switch (accepted.toLowerCase()) {
@@ -379,7 +399,9 @@ public class SandwichCustomization {
                 if (userDone.equalsIgnoreCase("d")) {
                     System.out.println("\nSummary of sides:");
 
-                    chosenSides.forEach(System.out::println);
+                    for (String side : chosenSides) {
+                        System.out.println(side);
+                    }
                     System.out.print("Is this correct? (Y/N): ");
                     String accepted = scanner.nextLine();
                     switch (accepted.toLowerCase()) {

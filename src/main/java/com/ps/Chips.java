@@ -5,6 +5,17 @@ import java.util.Scanner;
 
 public class Chips extends Order{
 
+    public Chips(double price) {
+        super(price);
+
+
+    }
+
+
+    public static String RESET = "\u001B[0m";
+    public static String RED = "\u001B[31m";
+    public static String GREEN = "\u001B[32m";
+
     // Adding chips to order
     public static void addChips(Scanner scanner) {
         System.out.print("How many bags of chips would you like?: ");
@@ -21,16 +32,20 @@ public class Chips extends Order{
                     UserInterface.chips.add("Bag of chips");
                 }
 
-                System.out.println(numberOfBags + " bag(s) of chips added to your order.");
+                System.out.println(GREEN+ numberOfBags + " bag(s) of chips added to your order."+ RESET);
             } else {
                 // invalid if the number is not positive
-                System.out.println("Invalid choice. Please enter a positive number.");
+                System.out.println(RED+ "Invalid choice. Please enter a positive number."+ RESET);
             }
         } else {
 
             scanner.nextLine();
 
-            System.out.println("Invalid input, please enter a number.");
+            System.out.println(RED+ "Invalid input, please enter a number."+ RESET);
         }
+
+
     }
+
+
 }

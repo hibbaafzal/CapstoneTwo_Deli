@@ -5,25 +5,46 @@ import java.util.List;
 
 public class Sandwich extends Order {
 
-    // instances of the lists
-    // store different customizations for each sandwich
+    public Sandwich(String size,
+                    String type,
+                    double price,
+                    List<String> premiumToppingsList,
+                    boolean extraMeat,
+                    List<String> regularToppingsList,
+                    List<String> cheesesList,
+                    boolean extraCheese,
+                    List<String> saucesList,
+                    boolean toasted,
+                    List<String> sidesList) {
 
-    private List<String> premiumToppingsList = new ArrayList<>();
-    private boolean extraMeat = false;
-    private List<String> regularToppingsList = new ArrayList<>();
-    private List<String> cheesesList = new ArrayList<>();
-    private boolean extraCheese = false;
-    private List<String> saucesList = new ArrayList<>();
-    private boolean toasted = false;
-    private List<String> sidesList = new ArrayList<>();
+        super(size, type, price);
+        this.premiumToppingsList = premiumToppingsList;
+        this.extraMeat = extraMeat;
+        this.regularToppingsList = regularToppingsList;
+        this.cheesesList = cheesesList;
+        this.extraCheese = extraCheese;
+        this.saucesList = saucesList;
+        this.toasted = toasted;
+        this.sidesList = sidesList;
+    }
 
-    //static lists holding available options
 
-    static List<String> premiumToppings = new ArrayList<>();
-    static List<String> regularToppings = new ArrayList<>();
-    static List<String> cheeses = new ArrayList<>();
-    static List<String> sauces = new ArrayList<>();
-    static List<String> sides = new ArrayList<>();
+
+    private List<String> premiumToppingsList;
+    private boolean extraMeat;
+    private List<String> regularToppingsList;
+    private List<String> cheesesList;
+    private boolean extraCheese;
+    private List<String> saucesList;
+    private boolean toasted;
+    private List<String> sidesList;
+
+    // Static lists holding available options
+    public static List<String> premiumToppings = new ArrayList<>();
+    public static List<String> regularToppings = new ArrayList<>();
+    public static List<String> cheeses = new ArrayList<>();
+    public static List<String> sauces = new ArrayList<>();
+    public static List<String> sides = new ArrayList<>();
 
     static {
         premiumToppings.add("Steak");
@@ -60,8 +81,7 @@ public class Sandwich extends Order {
     }
 
 
-    // getters and setters
-
+    // Getters and setters
     public List<String> getPremiumToppings() {
         return premiumToppingsList;
     }
@@ -126,9 +146,8 @@ public class Sandwich extends Order {
         this.toasted = toasted;
     }
 
-
-
-    // calculating price
+    // Calculating price
+    @Override
     public double getPrice() {
         double finalPrice = 0;
         double premiumToppingCharge = 0;
@@ -183,11 +202,9 @@ public class Sandwich extends Order {
         return finalPrice;
     }
 
-
     @Override
     public String toString() {
         return "-----------Your Sandwich-----------\n" +
-
                 "Bread Size: " + (getSize() != null ? getSize() : "Required") + "\n" +
                 "Bread Type: " + (getType() != null ? getType() : "Required") + "\n" +
                 "Premium Toppings: " + premiumToppingsList + "\n" +
@@ -197,12 +214,6 @@ public class Sandwich extends Order {
                 "Extra Cheese: " + extraCheese + "\n" +
                 "Sauces List: " + saucesList + "\n" +
                 "Toasted: " + toasted + "\n" +
-                "Sides:" + sidesList + "\n";
-
-
-
+                "Sides: " + sidesList + "\n";
     }
 }
-
-
-

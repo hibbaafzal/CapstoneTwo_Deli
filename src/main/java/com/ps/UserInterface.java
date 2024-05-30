@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class UserInterface extends Order {
+public class UserInterface {
 
     // Store the items
     static List<Sandwich> sandwiches = new ArrayList<>();
     static List<String> drinks = new ArrayList<>();
     static List<String> chips = new ArrayList<>();
+    static List<String> desserts = new ArrayList<>();
 
     // ANSI code
     public static String RESET = "\u001B[0m";
@@ -34,7 +35,7 @@ public class UserInterface extends Order {
 
                 switch (newOrderCommand) {
                     case 1:
-                        startOrder(scanner);
+                        startOrderProcess(scanner);
                         break;
                     case 0:
                         isRunning = false;
@@ -52,7 +53,7 @@ public class UserInterface extends Order {
     }
 
     // Start the ordering process
-    public static void startOrder(Scanner scanner) {
+    public static void startOrderProcess(Scanner scanner) {
         boolean isOrdering = true;
 
         do {
@@ -62,7 +63,8 @@ public class UserInterface extends Order {
             System.out.println("[1] Add Sandwich");
             System.out.println("[2] Add Drink");
             System.out.println("[3] Add Chips");
-            System.out.println(GREEN + "[4] Checkout" + RESET);
+            System.out.println("[4] Add Dessert");
+            System.out.println(GREEN + "[5] Checkout" + RESET);
             System.out.println(RED + "[0] Cancel Order" + RESET);
 
             if (scanner.hasNextInt()) {
@@ -77,9 +79,12 @@ public class UserInterface extends Order {
                         new Drinks().orderDrinks(scanner); // Add drink
                         break;
                     case 3:
-                        addChips(scanner); // Add chips
+                        Chips.addChips(scanner); // Add chips
                         break;
                     case 4:
+                        new Desserts().orderDesserts(scanner); // Add dessert
+                        break;
+                    case 5:
                         checkout(scanner); // Checkout
                         break;
                     case 0:
@@ -87,6 +92,7 @@ public class UserInterface extends Order {
                         sandwiches.clear();
                         drinks.clear();
                         chips.clear();
+                        desserts.clear();
                         isOrdering = false;
                         break;
                     default:
@@ -100,33 +106,10 @@ public class UserInterface extends Order {
         } while (isOrdering);
     }
 
-    // Method to add chips to the order
-    private static void addChips(Scanner scanner) {
-        System.out.print("How many bags of chips would you like?: ");
-
-        if (scanner.hasNextInt()) {
-            int numberOfBags = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
-
-            if (numberOfBags > 0) {
-                for (int i = 0; i < numberOfBags; i++) {
-                    chips.add("Bag of chips");
-                }
-                System.out.println(GREEN + numberOfBags + " bag(s) of chips added to your order." + RESET);
-
-            } else {
-                System.out.println(RED + "Invalid choice. Please enter a valid number." + RESET);
-            }
-        } else {
-            scanner.nextLine(); // Consume invalid input
-            System.out.println(RED + "Invalid input, please enter a number." + RESET);
-        }
-    }
-
     // Method to handle the checkout process
     private static void checkout(Scanner scanner) {
         System.out.println(YELLOW + "------------Your Order------------" + RESET);
-        if (sandwiches.isEmpty() && drinks.isEmpty() && chips.isEmpty()) {
+        if (sandwiches.isEmpty() && drinks.isEmpty() && chips.isEmpty() && desserts.isEmpty()) {
             System.out.println("Your order is empty.");
             System.out.println(RED + "Please add something to your order." + RESET);
             return;
@@ -149,6 +132,12 @@ public class UserInterface extends Order {
                     System.out.println(chip);
                 }
             }
+            if (!desserts.isEmpty()) {
+                System.out.println("Desserts:");
+                for (String dessert : desserts) {
+                    System.out.println(dessert);
+                }
+            }
         }
 
         // Prompt user to confirm or cancel the order
@@ -158,16 +147,18 @@ public class UserInterface extends Order {
         String choice = scanner.nextLine();
         switch (choice.toLowerCase()) {
             case "c":
-                OrderFileManager.printReceiptToFile(sandwiches, drinks, chips);
+                OrderFileManager.printReceiptToFile(sandwiches, drinks, chips, desserts);
                 sandwiches.clear();
                 drinks.clear();
                 chips.clear();
+                desserts.clear();
                 System.exit(0);
                 break;
             case "x":
                 sandwiches.clear();
                 drinks.clear();
                 chips.clear();
+                desserts.clear();
                 break;
             default:
                 System.out.println(RED + "Invalid choice, please try again." + RESET);

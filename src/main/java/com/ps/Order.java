@@ -5,6 +5,19 @@ public abstract class Order {
     private String type;
     private double price;
 
+    public Order(String size, String type, double price) {
+        this.size = size;
+        this.type = type;
+        this.price = price;
+    }
+
+    public Order() {
+
+    }
+
+    public Order(double price) {
+    }
+
     // Getters and Setters
     public String getSize() {
         return size;

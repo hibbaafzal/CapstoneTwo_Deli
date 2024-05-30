@@ -3,32 +3,35 @@ Date: 2024-05-29
 
 Sandwiches:
 -----------Your Sandwich-----------
-Bread Size: 4"
-Bread Type: White
+Bread Size: 8"
+Bread Type: Wheat
 Premium Toppings: [Steak]
 Extra Meat: true
-Regular Toppings: [Tomatoes]
-Cheeses: []
-Extra Cheese: false
-Sauces List: []
+Regular Toppings: [Lettuce]
+Cheeses: [Cheddar]
+Extra Cheese: true
+Sauces List: [Mayo, Ranch]
 Toasted: true
-Sides:[]
+Sides: [sauce]
 
 -----------Your Sandwich-----------
 Bread Size: 8"
 Bread Type: White
-Premium Toppings: [Bacon]
-Extra Meat: false
+Premium Toppings: [Salami]
+Extra Meat: true
 Regular Toppings: [Lettuce, Tomato]
 Cheeses: [Cheddar]
-Extra Cheese: false
+Extra Cheese: true
 Sauces List: [Ranch]
 Toasted: true
-Sides:[]
+Sides: []
 
 Drinks:
-Small Coke
-$2.00
+Medium Coke
+$2.50
+Chips:
+Bag of chips
+$1.50
 
-Tax: $1.73
-Total: $21.23
+Tax: $2.50
+Total: $30.70

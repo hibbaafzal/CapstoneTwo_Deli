@@ -1,0 +1,22 @@
+------------Your Order------------
+Sandwiches:
+-----------Your Sandwich-----------
+Bread Size: 8"
+Bread Type: Wheat
+Premium Toppings: []
+Extra Meat: false
+Regular Toppings: []
+Cheeses: []
+Extra Cheese: false
+Sauces List: []
+Toasted: true
+Sides: []
+
+
+Order Type: Pickup
+Name: hibba afzal
+Phone Number: 3920483904
+
+We appreciate your business, we hope you enjoy the DELI-cious deli sandwich!
+
+Thank you for your order!

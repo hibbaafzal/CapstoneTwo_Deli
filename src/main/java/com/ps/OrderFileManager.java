@@ -7,8 +7,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-
-
 public class OrderFileManager {
 
     public static String RESET = "\u001B[0m";
@@ -16,10 +14,11 @@ public class OrderFileManager {
     public static String YELLOW = "\u001B[33m";
 
     // Method to print the receipt to a file
-
     public static void printReceiptToFile(List<Sandwich> sandwiches,
                                           List<String> drinks,
-                                          List<String> chips) {
+                                          List<String> chips,
+                                          List<String> desserts) {
+
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
         String formattedDateTime = now.format(formatter);
@@ -64,10 +63,22 @@ public class OrderFileManager {
                 }
             }
 
+            // Write dessert details and calculate total price
+            if (!desserts.isEmpty()) {
+                bufferedWriter.write("Desserts:\n");
+                for (String dessert : desserts) {
+                    bufferedWriter.write(dessert + "\n");
+                    double dessertPrice = getDessertPrice(dessert);
+                    bufferedWriter.write(String.format("$%.2f\n", dessertPrice));
+                    total += dessertPrice;
+                }
+            }
+
             // Calculate and write tax and total amount
             double tax = total * 0.08875;
             bufferedWriter.write(String.format("\nTax: $%.2f\n", tax));
             bufferedWriter.write(String.format("Total: $%.2f\n", total + tax));
+
 
             System.out.println(GREEN + "Your receipt has been printed." + RESET);
             System.out.println(YELLOW + "Thank you for choosing DELI-cious Deli!\n" +
@@ -87,5 +98,21 @@ public class OrderFileManager {
             return 3.00;
         }
         return 0;
+    }
+
+    // Get the price of a dessert based on its type
+    private static double getDessertPrice(String dessert) {
+        switch (dessert) {
+            case "Chocolate Cake":
+                return 3.50;
+            case "Ice Cream":
+                return 2.50;
+            case "Brownie":
+                return 2.00;
+            case "Cheesecake":
+                return 4.00;
+            default:
+                return 0;
+        }
     }
 }
