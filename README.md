@@ -131,6 +131,7 @@ When users are done with their order, they can checkout and their receipt will b
 If a user wants a signature sandwich, they will also be able to get those.
 
 
+<img width="481" alt="Screenshot 2024-05-29 at 10 07 39 PM" src="https://github.com/hibbaafzal/CapstoneTwo_Deli/assets/166542360/4a7a0739-8207-4737-8c65-2f13576cf889">
 
 
 </details>
