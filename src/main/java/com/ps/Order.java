@@ -11,12 +11,6 @@ public abstract class Order {
         this.price = price;
     }
 
-    public Order() {
-
-    }
-
-    public Order(double price) {
-    }
 
     // Getters and Setters
     public String getSize() {
@@ -38,6 +32,17 @@ public abstract class Order {
     public double getPrice() {
         return price;
     }
+
+
+
+
+    public Order() {
+    }
+
+
+    public Order(double price) {
+    }
+
 
 
 }

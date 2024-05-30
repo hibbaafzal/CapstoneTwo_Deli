@@ -90,11 +90,11 @@ public class OrderFileManager {
 
     // Get the price of a drink based on its size
     private static double getDrinkPrice(String drink) {
-        if (drink.startsWith("Small")) {
+        if (drink.contains("Small")) {
             return 2.00;
-        } else if (drink.startsWith("Medium")) {
+        } else if (drink.contains("Medium")) {
             return 2.50;
-        } else if (drink.startsWith("Large")) {
+        } else if (drink.contains("Large")) {
             return 3.00;
         }
         return 0;

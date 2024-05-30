@@ -1,37 +1,40 @@
 --------- RECEIPT ---------
-Date: 2024-05-29
+Date: 2024-05-30
 
 Sandwiches:
 -----------Your Sandwich-----------
-Bread Size: 8"
+Bread Size: 12"
 Bread Type: Wheat
-Premium Toppings: [Steak]
+Premium Toppings: [Chicken]
 Extra Meat: true
-Regular Toppings: [Lettuce]
+Regular Toppings: []
 Cheeses: [Cheddar]
 Extra Cheese: true
-Sauces List: [Mayo, Ranch]
+Sauces: []
 Toasted: true
-Sides: [sauce]
+Sides: []
 
 -----------Your Sandwich-----------
 Bread Size: 8"
-Bread Type: White
-Premium Toppings: [Salami]
+Bread Type: Rye
+Premium Toppings: [Steak]
 Extra Meat: true
-Regular Toppings: [Lettuce, Tomato]
-Cheeses: [Cheddar]
+Regular Toppings: [Peppers]
+Cheeses: [American]
 Extra Cheese: true
-Sauces List: [Ranch]
+Sauces: [Mayo]
 Toasted: true
 Sides: []
 
 Drinks:
-Medium Coke
-$2.50
+Large Coke
+$3.00
 Chips:
 Bag of chips
 $1.50
+Desserts:
+Cheesecake
+$4.00
 
-Tax: $2.50
-Total: $30.70
+Tax: $3.26
+Total: $40.01

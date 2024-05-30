@@ -32,7 +32,7 @@ public class Drinks extends Order {
             System.out.printf("[%d] %s\n", i + 1, availableDrinks.get(i));
         }
 
-        System.out.print("\nEnter the number of the drink you want to add to your order: ");
+        System.out.print("\nWhat drink would you like?: ");
         if (scanner.hasNextInt()) {
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline

@@ -212,7 +212,7 @@ public class Sandwich extends Order {
                 "Regular Toppings: " + regularToppingsList + "\n" +
                 "Cheeses: " + cheesesList + "\n" +
                 "Extra Cheese: " + extraCheese + "\n" +
-                "Sauces List: " + saucesList + "\n" +
+                "Sauces: " + saucesList + "\n" +
                 "Toasted: " + toasted + "\n" +
                 "Sides: " + sidesList + "\n";
     }

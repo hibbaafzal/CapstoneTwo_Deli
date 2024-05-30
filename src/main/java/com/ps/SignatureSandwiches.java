@@ -23,7 +23,8 @@ public class SignatureSandwiches extends Sandwich {
     }
 
     public SignatureSandwiches(String sandwichType) {
-        super("8\"", "White", 0.0, new ArrayList<>(), false, new ArrayList<>(), new ArrayList<>(), false, new ArrayList<>(), true, new ArrayList<>());
+        super("8\"", "White", 0.0, new ArrayList<>(), false, new ArrayList<>(), new ArrayList<>(),
+                false, new ArrayList<>(), true, new ArrayList<>());
         switch (sandwichType) {
             case "BLT":
                 createBLTSandwich();

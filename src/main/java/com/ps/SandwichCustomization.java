@@ -19,6 +19,7 @@ public class SandwichCustomization {
         do {
             // Create a new sandwich object with default values
             Sandwich userSandwich = new Sandwich(
+
                     "Required",
                     "Required",
                     0.0, new ArrayList<>(),
@@ -112,6 +113,8 @@ public class SandwichCustomization {
                                 System.out.println(RED + "Sorry, it seems that you haven't chosen the required items (sandwich size / sandwich type)\nPlease select one of each to finalize your sandwich." + RESET);
                             }
                             break;
+
+
                         case 0:
                             isCreatingSandwich = false;
                             break;
