@@ -1,0 +1,40 @@
+--------- RECEIPT ---------
+Date: 2024-05-30
+
+Sandwiches:
+-----------Your Sandwich-----------
+Bread Size: 12"
+Bread Type: White
+Premium Toppings: [Steak]
+Extra Meat: true
+Regular Toppings: [Guacamole, Tomatoes]
+Cheeses: [American, American]
+Extra Cheese: true
+Sauces: []
+Toasted: true
+Sides: []
+
+-----------Your Sandwich-----------
+Bread Size: 8"
+Bread Type: White
+Premium Toppings: [Steak]
+Extra Meat: true
+Regular Toppings: [Tomatoes, Onions]
+Cheeses: [American]
+Extra Cheese: true
+Sauces: [Mayo]
+Toasted: true
+Sides: []
+
+Drinks:
+Large Water
+$3.00
+Chips:
+Bag of chips
+$1.50
+Desserts:
+Cheesecake
+$4.00
+
+Tax: $3.26
+Total: $40.01

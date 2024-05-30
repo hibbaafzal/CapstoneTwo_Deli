@@ -1,0 +1,42 @@
+--------- RECEIPT ---------
+Date: 2024-05-30
+
+Sandwiches:
+-----------Your Sandwich-----------
+Bread Size: 12"
+Bread Type: Wrap
+Premium Toppings: [Bacon]
+Extra Meat: true
+Regular Toppings: []
+Cheeses: [American]
+Extra Cheese: true
+Sauces: []
+Toasted: true
+Sides: []
+
+-----------Your Sandwich-----------
+Bread Size: 4"
+Bread Type: White
+Premium Toppings: [Steak]
+Extra Meat: true
+Regular Toppings: [Peppers]
+Cheeses: [American]
+Extra Cheese: true
+Sauces: [Mayo]
+Toasted: true
+Sides: []
+
+Drinks:
+Large Pepsi
+$3.00
+Small Water
+$2.00
+Chips:
+Bag of chips
+$1.50
+Desserts:
+Cheesecake
+$4.00
+
+Tax: $3.08
+Total: $37.78

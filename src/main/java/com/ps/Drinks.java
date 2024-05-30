@@ -10,19 +10,16 @@ public class Drinks extends Order {
     public static String RED = "\u001B[31m";
     public static String GREEN = "\u001B[32m";
 
-    List<String> availableDrinks = new ArrayList<>();
+    static List<String> availableDrinks = new ArrayList<>();
 
-
-    public Drinks() {
-        initializeAvailableDrinks();
-    }
-
-    private void initializeAvailableDrinks() {
+    static {
         availableDrinks.add("Coke");
         availableDrinks.add("Pepsi");
         availableDrinks.add("Sprite");
         availableDrinks.add("Water");
+
     }
+
 
     public void orderDrinks(Scanner scanner) {
         System.out.println("Available drinks:");

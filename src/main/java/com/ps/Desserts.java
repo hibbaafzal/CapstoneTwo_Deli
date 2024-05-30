@@ -10,19 +10,16 @@ public class Desserts extends Order {
     public static String RED = "\u001B[31m";
     public static String GREEN = "\u001B[32m";
 
-    List<String> availableDesserts = new ArrayList<>();
+     static ArrayList<String> availableDesserts = new ArrayList<>();
 
-
-    public Desserts() {
-        initializeAvailableDesserts();
-    }
-
-    private void initializeAvailableDesserts() {
+    static {
         availableDesserts.add("Chocolate Cake");
         availableDesserts.add("Cheesecake");
         availableDesserts.add("Brownie");
         availableDesserts.add("Ice Cream");
+
     }
+
 
     public void orderDesserts(Scanner scanner) {
         System.out.println("Available desserts:");

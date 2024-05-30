@@ -29,7 +29,7 @@ public class Sandwich extends Order {
     }
 
 
-
+// instances containing customizations specific to each sandwich.
     private List<String> premiumToppingsList;
     private boolean extraMeat;
     private List<String> regularToppingsList;
@@ -39,7 +39,7 @@ public class Sandwich extends Order {
     private boolean toasted;
     private List<String> sidesList;
 
-    // Static lists holding available options
+    // Static lists holding all available options
     public static List<String> premiumToppings = new ArrayList<>();
     public static List<String> regularToppings = new ArrayList<>();
     public static List<String> cheeses = new ArrayList<>();
@@ -201,6 +201,9 @@ public class Sandwich extends Order {
 
         return finalPrice;
     }
+
+
+
 
     @Override
     public String toString() {
